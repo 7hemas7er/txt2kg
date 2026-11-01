@@ -17,7 +17,7 @@ services:
       - NEO4J_USER=neo4j
       - NEO4J_PASSWORD=password123
       # LLM - Ollama locale (modelli ottimizzati)
-      - OLLAMA_BASE_URL=http://192.168.0.26:11434/v1
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434/v1
       - OLLAMA_MODEL=nemoclaw-agent
       - VLLM_BASE_URL=http://localhost:8001/v1
       - VLLM_MODEL=disabled
@@ -25,7 +25,7 @@ services:
       - QDRANT_URL=http://qdrant:6333
       - VECTOR_DB_TYPE=qdrant
       # Embeddings - Ollama nomic-embed-text (768 dim)
-      - EMBEDDINGS_API_URL=http://192.168.0.26:11434/v1
+      - EMBEDDINGS_API_URL=http://host.docker.internal:11434/v1
       - EMBEDDINGS_MODEL_ID=nomic-embed-text
       - EMBEDDINGS_PROVIDER=local
       # General
